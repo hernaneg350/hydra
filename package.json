@@ -1,0 +1,11 @@
+{
+  "name": "mycraft",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "raw-loader": "^0.5.1",
+    "webpack": "^3.3.0"
+  }
+}
