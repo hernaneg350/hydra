@@ -23,18 +23,7 @@ ProgramLoader.prototype.loadProgram = function(vertexShaderHandle, fragmentShade
 
 	var program = createProgram(this.gl, vertexShader, fragmentShader);
 
-	var attributes = {
-		position: this.gl.getAttribLocation(program, "position"),
-		transform: this.gl.getUniformLocation(program, "transform"),
-		texture: this.gl.getUniformLocation(program, "texture"),
-		colorMap: this.gl.getAttribLocation(program, "color_map"),
-		uvMap: this.gl.getAttribLocation(program, "uv_map")
-	};
-
-	var assetHandle = this.assetPool.saveAsset({
-		program: program,
-		attributes: attributes
-	});
+	var assetHandle = this.assetPool.saveAsset(program);
 
 	return Promise.resolve(assetHandle);
 };
